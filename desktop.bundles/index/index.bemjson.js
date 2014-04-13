@@ -1,6 +1,6 @@
 ({
     block: 'page',
-    title: 'BEM tryouts',
+    title: 'Television',
     favicon: '/favicon.ico',
     head: [
         { elem: 'css', url: 'index.css', ie: false },
@@ -15,230 +15,253 @@
     ],
     content: [
         {
-            block: 'body-wrapper',
+            block: 'wrapper',
             content: [
                 {
                     block: 'header',
                     content: [
                         {
-                            block: 'logo',
-                            image: 'http://pokormikota.ru/pics/logo.jpg'
-                        },
-                        {
-                            block: 'cart',
+                            block: 'country-choose',
                             content: [
                                 {
-                                    block: 'cart-icon',
-                                    image: 'http://pokormikota.ru/pics/icon-cart.png',
-                                    width: 54,
-                                    height: 55
+                                    elem: 'city',
+                                    text: 'Москва'
                                 },
                                 {
-                                    elem: 'text',
-                                    text: 'Корзина',
-                                    mods: { head: 'yes' }
-                                },
+                                    elem: 'region',
+                                    text: 'Сменить регион'                      
+                                }
+                     
+                            ]
+                        }
+                    ]
+                },
+                {
+                block: 'content',
+                    content: [
+                        {
+                            block: 'film-title',
+                            content: [
+                                'Брачный контракт',
                                 {
-                                    elem: 'text',
-                                    text: 'В Вашей корзине<br>пусто'
+                                    elem: 'info',
+                                    text: 'сериалы, 16+'
                                 }
                             ]
                         },
                         {
-                            block: 'worktime-and-adv',
-                            content: {
-                                block: 'paragraph',
-                                content: [
-                                    'Время работы доставки:<br><b>с 10 до 21 часа</b>',
+                            block: 'film-block-info',
+                            content: [
+                                {
+                                block: 'film-block-info-list',
+                                    content: [
+                                        {
+                                            elem: 'name',
+                                            text: 'Произведено:'
+                                        },
+                                        {
+                                            elem: 'text',
+                                            text: '2009'
+                                        },
+                                        {
+                                            elem: 'name',
+                                            text: 'Режиссер:'
+                                        },
+                                        {
+                                            elem: 'text',
+                                            text: 'Андрей Черных'
+                                        },
+                                        {
+                                            elem: 'name',
+                                            text: 'В ролях:'
+                                        },
+                                        {
+                                            elem: 'text',
+                                            content: [
+												'Армандс Нейландс-Яунземс, Роман Агеев, Игорь Ботвин, Татьяна Колганова, Сергей Кошонин ',
+												{
+													block: 'all-actors',
+													text: '• • •'
+												}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block: 'film-block-images',
+                            content: [
+                                {
+                                    elem: 'img-wrap',
+                                    content: [
+                                        {
+                                            elem: 'img',
+                                            image: 'http://avatars.yandex.net/get-tv-shows/1345134165467M81123/large',
+                                            width: 400,
+                                            height: 300
+                                        }        
+                                    ]
+                                },
+                                {
+                                    elem: 'thumbs',
+                                    content: [
+                                        {
+                                            elem: 'thumb',
+                                            image: 'http://avatars.yandex.net/get-tv-shows/1345134165467M81123/small',
+                                            cls: ['thumb_selected_yes']
+                                        },
+                                        {
+                                            elem: 'thumb',
+                                            image: 'http://avatars.yandex.net/get-tv-shows/1345134165546M49671/small'
+                                        },
+                                        {
+                                            elem: 'thumb',
+                                            image: 'http://avatars.yandex.net/get-tv-shows/1345134165633M91362/small'
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            block: 'film-block-description',
+                            cls: ['film-block-description__left'],
+                            content: [
+                                {
+                                    elem: 'title',
+                                    text: 'Описание'
+                                },
+                                {
+                                    elem: 'text',
+                                    text: 'По одноименному бестселлеру Татьяны Огородниковой. Трое мужчин - психолог Петр Разумовский, юрист Владимир Перов и бывший сотрудник правоохранительных органов Леонид Богатырев открывают брачное агентство. Их кредо - стоять на страже женских интересов. Их задача - помогать семейным парам или отдельным членам семей в их повседневном "брачном" труде, в ситуации развода или в условиях постразводных обстоятельств. В клиентскую базу агентства входят совершенно разные люди, и у каждого из них - не один скелет в шкафу, а за красивым фасадом счастливой семьи нередко скрываются настоящие драмы... Когда дела семейные начинают напоминать захватывающий детектив, а на кону оказывается человеческая жизнь, троице приходится приниматься за собственное расследование. И такое случается часто...'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                block: 'footer',
+                    content: [
+                        {
+                            block: 'film-recommended',
+                                content: [           
                                     {
-                                        block: 'links',
+                                        elem: 'title',
+                                        text: 'Смотрите также'
+                                    },
+                                    {
+                                        elem: 'list',
                                         content: [
-                                            'Корма для кошек:<br>',
                                             {
-                                                block: 'link',
-                                                url: 'http://pokormikota.ru/shop/korma?brand=Royal Canin',
-                                                text: 'Royal Canin'
+                                                elem: 'item',
+                                                content: [
+                                                    {
+                                                        elem: 'link',
+                                                        content: [
+                                                            {
+                                                                elem: 'img',
+                                                                image: 'http://avatars.yandex.net/get-tv-shows/1396542209876M21014/middle',
+                                                                width: 160,
+                                                                height: 120
+                                                            } 
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem: 'name',
+                                                        content: [
+                                                            {
+                                                                elem: 'name-link',
+                                                                url: '#',
+                                                                text: 'Красный лотос'
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem: 'date',
+                                                        text: 'сегодня 11:55'
+                                                    },
+                                                    {
+                                                        elem: 'channel',
+                                                        text: 'ТВ Центр'
+                                                    }
+                                                ]
                                             },
-                                            ', ',
                                             {
-                                                block: 'link',
-                                                url: 'http://pokormikota.ru/shop/korma?brand=Nutram',
-                                                text: 'Nutram'
+                                                elem: 'item',
+                                                content: [
+                                                    {
+                                                        elem: 'link',
+                                                        content: [
+                                                            {
+                                                                elem: 'img',
+                                                                image: 'http://avatars.yandex.net/get-tv-shows/1385040171427M33150/middle',
+                                                                width: 160,
+                                                                height: 120
+                                                            } 
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem: 'name',
+                                                        content: [
+                                                            {
+                                                                elem: 'name-link',
+                                                                url: '#',
+                                                                text: 'Разрушители мифов'
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem: 'date',
+                                                        text: 'сегодня 12:20'
+                                                    },
+                                                    {
+                                                        elem: 'channel',
+                                                        text: 'Пятница'
+                                                    }
+                                                ]
                                             },
-                                            ', ',
                                             {
-                                                block: 'link',
-                                                url: 'http://pokormikota.ru/shop/korma?brand=Shesir',
-                                                text: 'Shesir'
+                                                elem: 'item',
+                                                content: [
+                                                    {
+                                                        elem: 'link',
+                                                        content: [
+                                                            {
+                                                                elem: 'img',
+                                                                image: 'http://avatars.yandex.net/get-tv-shows/1365778442468M90571/middle',
+                                                                width: 160,
+                                                                height: 120
+                                                            } 
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem: 'name',
+                                                        content: [
+                                                            {
+                                                                elem: 'name-link',
+                                                                url: '#',
+                                                                text: 'Сердца трех. 1-я серия'
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        elem: 'date',
+                                                        text: 'сегодня 12:30'
+                                                    },
+                                                    {
+                                                        elem: 'channel',
+                                                        text: '5 канал'
+                                                    }
+                                                ]
                                             }
                                         ]
+
                                     }
                                 ]
                             }
-                        }
-                    ]
-                },
-                {
-                    block: 'menu',
-                    mods: { 'body': 'main' },
-                    content: [
-                        {
-                            elem: 'item',
-                            text: 'Магазин',
-                            url: 'http://pokormikota.ru/shop',
-                            cls: ['active']
-                        },
-                        {
-                            elem: 'item',
-                            text: 'Условия доставки',
-                            url: 'http://pokormikota.ru/delivery'
-                        },
-                        {
-                            elem: 'item',
-                            text: 'Бонусы',
-                            url: 'http://pokormikota.ru/bonus'
-                        },
-                        {
-                            elem: 'item',
-                            text: 'Контакты',
-                            url: 'http://pokormikota.ru/contacts'
-                        },
-
-                        {
-                            elem: 'item',
-                            text: 'Вход',
-                            url: 'http://pokormikota.ru/login',
-                            mods: { 'bind': 'right' }
-                        }
-                    ]
-                },
-                {
-                    block: 'content-wrapper',
-                    content: [
-                                {
-                            block: 'menu',
-                            mods: { 'body': 'sub' },
-                            content: [
-                                {
-                                    'elem': 'item',
-                                    'text': 'Корма',
-                                    'url': 'http://pokormikota.ru/shop/korma'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Наполнители',
-                                    'url': 'http://pokormikota.ru/shop/chistota-i-poryadok'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Переноски',
-                                    'url': 'http://pokormikota.ru/shop/perenoski'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Туалеты',
-                                    'url': 'http://pokormikota.ru/shop/tualety'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Когтеточки',
-                                    'url': 'http://pokormikota.ru/shop/domiki-i-kogtetochki'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Игрушки',
-                                    'url': 'http://pokormikota.ru/shop/igrushki-i-suveniry'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Груминг',
-                                    'url': 'http://pokormikota.ru/shop/grooming'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Аксессуары',
-                                    'url': 'http://pokormikota.ru/shop/oshejniki-i-shlejki'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Сувениры',
-                                    'url': 'http://pokormikota.ru/shop/souvenirs'
-                                },
-                                {
-                                    'elem': 'item',
-                                    'text': 'Уценка',
-                                    'url': 'http://pokormikota.ru/shop/utsenka'
-                                }
-                            ]
-                        },
-                        {
-                            block: 'header-text',
-                            text: 'Интернет-магазин для кошек и их хозяев',
-                            level: 1
-                        },
-                        {
-                            block: 'paragraph',
-                            js: true,
-                            content: [
-                                'pokormikota.ru - это специализированный интернет-магазин для кошек и их хозяев. У нас вы сможете заказать корма и множество других товаров необходимых для содержания и ухода за вашим любимым питомцем.',
-                                'Всем хорошо известно, что правильное и полноценное питание, гарантирует хорошее настроение и самочувствие вашего любимчика. Поэтому в нашем интернет-магазине мы предлагаем корм для кошек премиум класса и супер-премиум класса.'
-                            ]
-                        },
-                        {
-                            block: 'header-text',
-                            text: 'Самые заказываемые товары',
-                            level: 2
-                        },
-                    ]
-                }
-            ]
-        },
-        {
-            block: 'menu',
-            mods: { 'footer': 'yes' },
-            content: [
-                {
-                    elem: 'item',
-                    text: 'Магазин',
-                    url: 'http://pokormikota.ru/shop'
-                },
-                {
-                    elem: 'item',
-                    text: 'Условия доставки',
-                    url: 'http://pokormikota.ru/delivery'
-                },
-                {
-                    elem: 'item',
-                    text: 'Бонусы',
-                    url: 'http://pokormikota.ru/bonus'
-                },
-                {
-                    elem: 'item',
-                    text: 'Контакты',
-                    url: 'http://pokormikota.ru/contacts'
-                },
-
-                {
-                    elem: 'item',
-                    content: [{
-                        block: 'adv-rc',
-                        url: 'http://pokormikota.ru/pics/banners/rc_logo120.jpg'
-                    }]
-                },
-                {
-                    elem: 'item',
-                    content: [{
-                        block: 'adv-rc',
-                        url: 'http://pokormikota.ru/pics/banners/RC-120X45.gif'
-                    }]
-                },
-
-                {
-                    elem: 'item',
-                    text: '&copy; 2010-2014 &laquo;pokormikota.ru (интернет-магазин)&raquo;',
-                    mods: { 'bind': 'right' }
-                }
-            ]
-        }
-    ]
-})
+                        ]
+                    }    
+                ]
+            }                                
+        ]
+    })
